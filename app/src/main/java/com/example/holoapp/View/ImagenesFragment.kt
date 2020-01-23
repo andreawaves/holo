@@ -9,9 +9,7 @@ import android.view.ViewGroup
 
 import com.example.holoapp.R
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class ImagenesFragment : Fragment() {
 
     override fun onCreateView(

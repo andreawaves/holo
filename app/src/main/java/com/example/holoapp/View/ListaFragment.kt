@@ -9,9 +9,7 @@ import android.view.ViewGroup
 
 import com.example.holoapp.R
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class ListaFragment : Fragment() {
 
     override fun onCreateView(
@@ -21,6 +19,5 @@ class ListaFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_lista, container, false)
     }
-
 
 }
