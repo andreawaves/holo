@@ -4,7 +4,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
-class MainPresenter (var view: View){
+class MainPresenter (var view: View) {
 
     var mContext : AppCompatActivity
 
