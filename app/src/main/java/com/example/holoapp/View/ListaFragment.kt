@@ -19,19 +19,32 @@ import kotlinx.android.synthetic.main.fragment_lista.*
 class ListaFragment : Fragment() {
 
     private lateinit var mContext: Context
+    private lateinit var root:View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_lista, container, false)
+        root = inflater.inflate(R.layout.fragment_lista, container, false)
         mContext = root.context
+
+
+        var listaNailpolish = ArrayList<Nailpolish>()
+        var nailpolish = Nailpolish()
+        nailpolish.name = "Andrea"
+        listaNailpolish.add(nailpolish)
+
+        var nailpolish1 = Nailpolish()
+        nailpolish1.name = "Marjorie"
+        listaNailpolish.add(nailpolish1)
+
+        setRecyclerAdapter(listaNailpolish)
         return root
     }
 
 
     fun setRecyclerAdapter(listaNailpolish: ArrayList<Nailpolish>){
-        val recyclerView: RecyclerView = nailpolish_recycler_view
+        val recyclerView: RecyclerView = root.findViewById(R.id.nailpolishs_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(mContext)
         val adapter = NailpolishRecyclerAdapter(mContext, listaNailpolish)
         recyclerView.adapter = adapter
