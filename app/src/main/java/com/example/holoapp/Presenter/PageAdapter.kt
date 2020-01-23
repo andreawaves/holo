@@ -27,10 +27,10 @@ class PageAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager, Frag
 
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
-            0 -> "Lista"
-            1 -> "Imágenes"
+            0 -> "LISTA"
+            1 -> "IMÁGENES"
             else -> {
-                return "Perfil"
+                return "PERFIL"
             }
         }
     }

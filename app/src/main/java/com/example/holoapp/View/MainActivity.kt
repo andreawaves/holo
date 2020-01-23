@@ -34,8 +34,9 @@ class MainActivity : AppCompatActivity(), MainPresenter.View{
 
     override fun sonValidos(respuesta:Boolean) {
         if (respuesta) {
-            //val intent = Intent(this, SecondActivity::class.java)
-            //startActivity(intent)
+            this.finish()
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
         }
     }
 
