@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".View.MainActivity">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".View.DetalleActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,51 +17,58 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="280dp"
+            android:id="@+id/iv_photo2"
+            android:layout_width="250dp"
             android:layout_height="250dp"
+            android:layout_marginBottom="22dp"
+            app:srcCompat="@android:color/holo_purple" />
 
-            app:srcCompat="@drawable/holo_logo" />
-
-        <EditText
-            android:id="@+id/et_nombre"
+        <TextView
+            android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:fontFamily="@font/poppins_light"
-            android:hint="Nombre"
-            android:inputType="textPersonName"
+            android:gravity="center"
+            android:text="NAME"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/et_correo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="45dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:fontFamily="@font/poppins_light"
-            android:hint="Correo"
-            android:inputType="textEmailAddress"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn_ingresar"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/colorPrimary"
-
-            android:fontFamily="@font/poppins_light"
-            android:text="Ingresar"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/et_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="$0.00"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="5"
+            android:padding="5dp"
+
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@android:color/white"
+            android:scrollbars="vertical"
+
+            android:text="Description"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+
+            android:textSize="14sp" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
