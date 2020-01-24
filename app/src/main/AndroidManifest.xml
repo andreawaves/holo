@@ -12,7 +12,9 @@
         <activity android:name=".View.DetalleActivity"
             android:parentActivityName=".View.DashboardActivity"
             ></activity>
-        <activity android:name=".View.DashboardActivity" />
+        <activity android:name=".View.DashboardActivity"
+            android:parentActivityName=".View.MainActivity"
+            />
         <activity android:name=".View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

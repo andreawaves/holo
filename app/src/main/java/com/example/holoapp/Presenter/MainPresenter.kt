@@ -1,5 +1,7 @@
 package com.example.holoapp.Presenter
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -10,7 +12,6 @@ class MainPresenter (var view: View) {
 
     init {
         mContext = view.getContext()
-        view
     }
 
     fun validar(nombre:String, correo:String) {
@@ -25,6 +26,7 @@ class MainPresenter (var view: View) {
                 } else {
                     if (correoValido(correo)) {
                         Toast.makeText(mContext, "¡Ingreso existoso!", Toast.LENGTH_LONG).show()
+                        guardarDatos(nombre,correo)
                         view.sonValidos(true)
                     } else {
                         Toast.makeText(mContext, "Correo inválido", Toast.LENGTH_LONG).show()
@@ -33,10 +35,15 @@ class MainPresenter (var view: View) {
                 }
             }
         }
-
-
     }
 
+    fun guardarDatos(nombre: String,correo: String) {
+        val editor : SharedPreferences.Editor = mContext.getSharedPreferences("login",
+            Context.MODE_PRIVATE).edit()
+        editor.putString("nombre",nombre)
+        editor.putString("correo",correo)
+        editor.apply()
+    }
 
     fun correoValido(correo: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(correo).matches()
