@@ -26,7 +26,6 @@ class ImagenesFragment : Fragment(), ImagenesPresenter.View{
     private lateinit var root : View
     private lateinit var mContext : Context
     private lateinit var presenter: ImagenesPresenter
-    private lateinit var toolbar : ActionBar
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

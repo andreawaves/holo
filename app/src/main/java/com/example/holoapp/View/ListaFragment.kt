@@ -41,7 +41,7 @@ class ListaFragment : Fragment(),ListaPresenter.View {
         setRecyclerAdapter(listaNailpolish)
     }
 
-    fun setRecyclerAdapter(listaNailpolish: ArrayList<Nailpolish>){
+    private fun setRecyclerAdapter(listaNailpolish: ArrayList<Nailpolish>){
         val recyclerView: RecyclerView = root.findViewById(R.id.nailpolishs_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(mContext)
         val adapter = NailpolishRecyclerAdapter(mContext, listaNailpolish)

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), MainPresenter.View{
         btn_ingresar.setOnClickListener { validar() }
     }
 
-    fun validar() {
+    private fun validar() {
         val nombre = et_nombre.text.toString().trim()
         val correo = et_correo.text.toString().trim()
 

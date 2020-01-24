@@ -28,7 +28,6 @@ class DetalleActivity : AppCompatActivity() {
         et_name.text = nailpolish.name
         et_price.text = nailpolish.price
         et_description.text = nailpolish.description
-
         et_description.setMovementMethod(ScrollingMovementMethod())
 
         Glide.with(this)
