@@ -6,16 +6,25 @@ android:minHeight="60dp"
 android:background="@color/morado"
     >
 
-<TextView
-    android:id="@+id/titulo"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Title"
-    android:textAllCaps="true"
-    android:textSize="20sp"
-    android:textColor="@android:color/white"
-    android:layout_gravity="left"
-    android:fontFamily="@font/poppins_light"
-    />
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="left"
+        android:fontFamily="@font/poppins_light"
+        />
+
+    <ImageButton
+        android:id="@+id/x_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_close_black_24dp"
+        android:visibility="invisible" />
 
 </androidx.appcompat.widget.Toolbar>

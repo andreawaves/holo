@@ -16,6 +16,7 @@ import com.example.holoapp.Presenter.ImagenesPresenter
 import com.example.holoapp.R
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.fragment_imagenes.*
+import kotlinx.android.synthetic.main.my_toolbar.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -37,18 +38,12 @@ class ImagenesFragment : Fragment(), ImagenesPresenter.View{
         presenter = ImagenesPresenter(this)
         presenter.obtenerListaImagenes()
 
-        toolbar = Objects.requireNonNull((Objects.requireNonNull(activity) as AppCompatActivity).supportActionBar)!!
         return root
     }
 
     override fun onImagenesDataFinished(listaImagenes: ArrayList<String>) {
         val adapter = ImagenAdapter(mContext, listaImagenes)
         gv_imagenes.adapter = adapter
-    }
-
-    override fun onResume() {
-        super.onResume()
-        toolbar.setDisplayHomeAsUpEnabled(false)
     }
 
 
