@@ -14,8 +14,8 @@ import kotlinx.android.synthetic.main.item_nailpolish.view.*
 
 class NailpolishRecyclerAdapter: RecyclerView.Adapter<NailpolishRecyclerAdapter.ViewHolder>{
 
-    private lateinit var mContext: Context
-    private lateinit var listaNailpolish: ArrayList<Nailpolish>
+    private var mContext: Context
+    private var listaNailpolish: ArrayList<Nailpolish>
 
     constructor(mContext: Context, listaNailpolish: ArrayList<Nailpolish>) : super() {
         this.mContext = mContext
