@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "994912955585",
+    "firebase_url": "https://holoapp-44e77.firebaseio.com",
+    "project_id": "holoapp-44e77",
+    "storage_bucket": "holoapp-44e77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994912955585:android:ec5ec6414a5719ca243840",
+        "android_client_info": {
+          "package_name": "com.example.holoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994912955585-8tsd6c89i03otj06l1ejm059l3r1j635.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.holoapp",
+            "certificate_hash": "03a5ea8f2e2f14ec11d9676a6477795145a98e42"
+          }
+        },
+        {
+          "client_id": "994912955585-4vjed3mnoc4ert8qj9dieadhjq4uucck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNEkrh_kANRzXmJAZ0iFOoxb0w9dny_-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994912955585-4vjed3mnoc4ert8qj9dieadhjq4uucck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

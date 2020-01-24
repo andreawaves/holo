@@ -10,16 +10,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.holoapp.Model.Nailpolish
+import com.example.holoapp.Presenter.ListaPresenter
 import com.example.holoapp.Presenter.NailpolishRecyclerAdapter
 
 import com.example.holoapp.R
 import kotlinx.android.synthetic.main.fragment_lista.*
 
 
-class ListaFragment : Fragment() {
+class ListaFragment : Fragment(),ListaPresenter.View {
+
 
     private lateinit var mContext: Context
     private lateinit var root:View
+    private lateinit var presenter:ListaPresenter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,20 +31,15 @@ class ListaFragment : Fragment() {
         root = inflater.inflate(R.layout.fragment_lista, container, false)
         mContext = root.context
 
+        presenter = ListaPresenter(this)
+        presenter.obtenerListaNailpolish()
 
-        var listaNailpolish = ArrayList<Nailpolish>()
-        var nailpolish = Nailpolish()
-        nailpolish.name = "Andrea"
-        listaNailpolish.add(nailpolish)
-
-        var nailpolish1 = Nailpolish()
-        nailpolish1.name = "Marjorie"
-        listaNailpolish.add(nailpolish1)
-
-        setRecyclerAdapter(listaNailpolish)
         return root
     }
 
+    override fun onNailpolishDataFinished(listaNailpolish: ArrayList<Nailpolish>) {
+        setRecyclerAdapter(listaNailpolish)
+    }
 
     fun setRecyclerAdapter(listaNailpolish: ArrayList<Nailpolish>){
         val recyclerView: RecyclerView = root.findViewById(R.id.nailpolishs_recycler_view)

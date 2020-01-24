@@ -3,6 +3,7 @@ package com.example.holoapp.Model
 import java.io.Serializable
 
 data class Nailpolish (
+    var id:String = "",
     var photo1:String = "",
     var photo2:String = "",
     var name:String = "",
